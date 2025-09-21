@@ -42,7 +42,7 @@ export default function Page() {
                 delay={BLUR_FADE_DELAY * 1.5}
                 className="text-sm text-muted-foreground md:text-base"
                 yOffset={8}
-                text={`In Cantonese, I'm Cheng Hei Lam (鄭曦琳). "Cheng" (chehng), "Hei" (hay), "Lam" (lum as in lumber)`}
+                text={`Most people know me as Carson Young. In Cantonese, I'm Young Ka Shun (楊家信).`}
               />
               <BlurFadeText
                 className="max-w-[600px] text-muted-foreground md:text-xl"
@@ -68,38 +68,33 @@ export default function Page() {
           <div className="space-y-content-sm">
         <BlurFade delay={BLUR_FADE_DELAY * 11}>
           <p className="prose max-w-full text-pretty font-sans text-sm text-muted-foreground dark:prose-invert">
-            I&apos;m a Homo sapiens born and raised in Hong Kong. I also spent a year studying in the UK and semesters in the US and France, experiences that opened my mind and shaped how I see the world.
+            Born and raised in Hong Kong, I have called Melbourne, Australia home for the past seven years. Fascinated by the elegance of the fundamental principles of the natural world, I pursued a degree in Mathematics and Physics, where I was introduced to a range of wonderful theories.
           </p>
         </BlurFade>
         <BlurFade delay={BLUR_FADE_DELAY * 12}>
               <p className="prose max-w-full text-pretty font-sans text-sm text-muted-foreground dark:prose-invert">
-            Before university, I was that kid obsessed with biology and completely hooked on the Olympiad. I loved exploring the mysteries of life. But after countless hours pipetting in the lab, I started to feel burnt out. I realized I loved biology, just not the endless wet lab work.
+            Initially drawn to a career in research, I found greater fulfilment in Data Science. I am currently a Data Scientist at a Melbourne-based consultancy, specialising in Spatio-Temporal Statistics and mobility data analytics. While working part-time in industry, I completed a Master&apos;s degree in Data Science, honing skills in software development, cloud computing, and big data processing.
           </p>
         </BlurFade>
         <BlurFade delay={BLUR_FADE_DELAY * 13}>
               <p className="prose max-w-full text-pretty font-sans text-sm text-muted-foreground dark:prose-invert">
-            At the same time, I discovered the beauty and speed of simulations, where you can explore complex systems without spilling a single drop. One day, I had a lightbulb moment: &ldquo;What if I could use math and code to solve big biology questions instead?&rdquo; That idea completely changed my path.
+            Although no longer formally in research or postgraduate study, I continue to read mathematics and physics for leisure, exploring topics like classical field theory, cool differential equations, and (finally) trying to understand Lie Algebra.
           </p>
         </BlurFade>
         <BlurFade delay={BLUR_FADE_DELAY * 14}>
               <p className="prose max-w-full text-pretty font-sans text-sm text-muted-foreground dark:prose-invert">
-            And so, here I am, merging my love for biology with the power of math and computation.
-          </p>
-        </BlurFade>
-        <BlurFade delay={BLUR_FADE_DELAY * 15}>
-              <p className="prose max-w-full text-pretty font-sans text-sm text-muted-foreground dark:prose-invert">
-            When I&apos;m not coding or solving equations, you&apos;ll find me kayaking, playing tennis, or on a mission to hunt down the best ramen and handmade pasta in Hong Kong (I might have tried them all by now). And when it comes to boba, it&apos;s always &ldquo;No.1&rdquo; at Comebuytea.
+            Outside of work, I enjoy cooking at home, including a weekly hearty Sunday roast. I have recently discovered a passion for skiing, inspired in part by my current boss, who is an avid skier.
           </p>
         </BlurFade>
           </div>
         </div>
       </section>
 
-      <section id="ethics" className="mb-section-lg">
+      {/* <section id="ethics" className="mb-section-lg">
         <div className="space-y-content-md">
           <EthicsQuote delay={BLUR_FADE_DELAY * 15.5} />
         </div>
-      </section>
+      </section> */}
 
       <section id="work" className="mb-section-lg">
         <div className="space-y-12">
@@ -153,7 +148,7 @@ export default function Page() {
         <TechStack delay={BLUR_FADE_DELAY * 21} />
       </section>
 
-      <section id="projects" className="mb-section-lg">
+      {/* <section id="projects" className="mb-section-lg">
         <div className="space-y-content-lg">
           <BlurFade delay={BLUR_FADE_DELAY * 22}>
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
@@ -190,10 +185,10 @@ export default function Page() {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       <section id="github" className="mb-section-lg">
-        <GitHubContributions username="heilcheng" delay={BLUR_FADE_DELAY * 24} />
+        <GitHubContributions username="carson-young" delay={BLUR_FADE_DELAY * 24} />
       </section>
 
       <section id="books" className="mb-section-lg">

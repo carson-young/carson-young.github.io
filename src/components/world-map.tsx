@@ -7,40 +7,28 @@ import geoData from "../../public/world-countries.json";
 
 // List of countries you've visited (ISO 3166-1 alpha-3 codes)
 const visitedCountries = [
-  "USA", // United States
-  "CHN", // China
+  "AUS", // Australia
+  "NZL", // New Zealand
+  "SGP", // Singapore
+  "THA", // Thailand
   "TWN", // Taiwan
   "JPN", // Japan
   "KOR", // South Korea
-  "MYS", // Malaysia
-  "THA", // Thailand
-  "FRA", // France
-  "ESP", // Spain
-  "CHE", // Switzerland
-  "ITA", // Italy
-  "QAT", // Qatar
-  "GBR", // United Kingdom
-  "FIN", // Finland
-  "VAT", // Vatican City
+  "CHN", // China
+  "IND", // India
 ];
 
 // Map of country codes to full names and categories for the word list
 const countryData: { [key: string]: { name: string; category: string } } = {
-  "USA": { name: "United States", category: "North America" },
-  "CHN": { name: "China", category: "Asia" },
+  "AUS": { name: "Australia", category: "Oceania" },
+  "NZL": { name: "New Zealand", category: "Oceania" },
+  "SGP": { name: "Singapore", category: "Asia" },
+  "THA": { name: "Thailand", category: "Asia" },
   "TWN": { name: "Taiwan", category: "Asia" },
   "JPN": { name: "Japan", category: "Asia" },
   "KOR": { name: "South Korea", category: "Asia" },
-  "MYS": { name: "Malaysia", category: "Asia" },
-  "THA": { name: "Thailand", category: "Asia" },
-  "FRA": { name: "France", category: "Europe" },
-  "ESP": { name: "Spain", category: "Europe" },
-  "CHE": { name: "Switzerland", category: "Europe" },
-  "ITA": { name: "Italy", category: "Europe" },
-  "QAT": { name: "Qatar", category: "Middle East" },
-  "GBR": { name: "United Kingdom", category: "Europe" },
-  "FIN": { name: "Finland", category: "Europe" },
-  "VAT": { name: "Vatican City", category: "Europe" },
+  "CHN": { name: "China", category: "Asia" },
+  "IND": { name: "India", category: "Asia" },
 };
 
 interface WorldMapProps {
@@ -50,7 +38,7 @@ interface WorldMapProps {
 export const WorldMap = ({ delay }: WorldMapProps) => {
   const [isClient, setIsClient] = useState(false);
   const [hoveredCountry, setHoveredCountry] = useState<string | null>(null);
-  const [position, setPosition] = useState({ coordinates: [0, 20], zoom: 1.5 });
+  const [position, setPosition] = useState({ coordinates: [40, 20], zoom: 1 });
 
   useEffect(() => {
     setIsClient(true);
