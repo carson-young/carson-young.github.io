@@ -262,7 +262,7 @@ export default function Page() {
                 World Map.
               </h2>
               <p className="text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                Countries I&apos;ve visited and want to visit.
+                Places I&apos;ve visited.
               </p>
             </div>
           </div>
