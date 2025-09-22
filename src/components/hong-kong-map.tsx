@@ -12,65 +12,35 @@ interface HongKongMapProps {
 
 // Location data remains the same
 const locations = {
-  "Tai Mo Shan": {
-    name: "Tai Mo Shan (大帽山)",
-    description: "Camping on December 31st to wait for the sunrise",
-    coordinates: [22.4197, 114.1175], // Lat, Lon for Leaflet
+  "Red Incense Burner Summit": {
+    name: "Red Incense Burner Summit (紅香爐峰)",
+    description: "Great views of Hong Kong",
+    coordinates: [22.282, 114.197], // Lat, Lon for Leaflet
     type: "nature"
   },
-  "Tiu Chung Chau": {
-    name: "Tiu Chung Chau (吊鐘洲)",
-    description: "Kayaking spot (northeast, near Sai Kung; not Cheung Chau)",
-    coordinates: [22.348, 114.36], // Corrected coordinates for better placement
+  "James Bond Filming Location Monument": {
+    name: "James Bond Filming Location Monument (007撮影記念碑)",
+    description: "Good Times cycling from Fukuoka to Kagoshima in 2018",
+    coordinates: [31.373, 130.200], // Corrected coordinates for better placement
     type: "nature"
   },
-  "Tai Tong": {
-    name: "Tai Tong Sweet Gum Woods (大棠紅葉楓香林)",
-    description: "Hiking with beautiful autumn leaves",
-    coordinates: [22.421, 114.019], // Corrected coordinates
+  "Sani": {
+    name: "Sani",
+    description: "Nice place for brunch. Good idea for first date.",
+    coordinates: [-37.777, 144.971], // Corrected coordinates
+    type: "Urban"
+  },
+  "Wellington Harbour": {
+    name: "Wellington harbour",
+    description: "Scootered here in 2021 on my solo visit.",
+    coordinates: [-41.300, 174.806], // Corrected coordinates
     type: "nature"
   },
-  "Thousand Island Lake": {
-    name: "Thousand Island Lake (千島湖)",
-    description: "Hiking destination (near Tai Lam Chung Reservoir)",
-    coordinates: [22.37, 114.03], // Corrected coordinates
-    type: "nature"
-  },
-  "Braemar Hill": {
-    name: "Braemar Hill (寶馬山)",
-    description: "Night hiking with city views",
-    coordinates: [22.2822, 114.2006],
-    type: "nature"
-  },
-  "West Kowloon": {
-    name: "West Kowloon (西九龍)",
-    description: "Picnicking by the harbor",
-    coordinates: [22.3045, 114.1588],
-    type: "urban"
-  },
-  "Admiralty": {
-    name: "Admiralty (金鐘)",
-    description: "Start of city walk",
-    coordinates: [22.2797, 114.1655],
-    type: "urban"
-  },
-  "Causeway Bay": {
-    name: "Causeway Bay (銅鑼灣)",
-    description: "End of city walk",
-    coordinates: [22.2806, 114.1860],
-    type: "urban"
-  },
-  "SoHo": {
-    name: "SoHo",
-    description: "Bar Leone - Asia's Best Bar 2024",
-    coordinates: [22.2819, 114.1511],
-    type: "urban"
-  },
-  "Sai Kung": {
-    name: "Sai Kung (西貢)",
-    description: "Squid fishing",
-    coordinates: [22.3833, 114.2710],
-    type: "nature"
+  "Taipei 101": {
+    name: "Taipei 101",
+    description: "Always fun to visit Taipei",
+    coordinates: [25.034, 121.565], // Corrected coordinates
+    type: "Urban"
   }
 };
 
@@ -133,15 +103,17 @@ export const HongKongMap = ({ delay = 0 }: HongKongMapProps) => {
           <div className="flex flex-col items-center space-y-6">
             <div className="relative w-full h-96 max-w-4xl rounded-lg overflow-hidden border">
               <MapContainer 
-                center={[22.35, 114.15]} // Center of Hong Kong
-                zoom={10} 
+                center={[5, 110]} // Center of Hong Kong
+                zoom={2} 
                 style={{ height: '100%', width: '100%' }}
                 scrollWheelZoom={false}
               >
-                <TileLayer
-                  url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-                  attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-                />
+              <TileLayer
+                url="https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png"
+                attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>'
+                subdomains={['a', 'b', 'c', 'd']}
+                maxZoom={20}
+              />
                 {Object.entries(locations).map(([key, location]) => (
                   <Marker
                     key={key}
