@@ -7,7 +7,7 @@ import { ExternalLink, Search, Filter } from "lucide-react";
 
 export const metadata = {
   title: "Blog",
-  description: "My thoughts on software development, life, and more.",
+  description: "My thoughts on data science, life, and more.",
 };
 
 const BLUR_FADE_DELAY = 0.04;
@@ -170,7 +170,7 @@ export default async function BlogPage() {
                         ))}
                         {post.isExternal && (
                           <span className="text-xs px-3 py-1 rounded-full bg-muted/50 text-muted-foreground font-medium">
-                            Medium
+                            LinkedIn
                           </span>
                         )}
                       </div>
