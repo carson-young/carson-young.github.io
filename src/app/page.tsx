@@ -236,23 +236,23 @@ export default function Page() {
         </div>
       </section>
 
-      {/* <section id="hong-kong" className="mb-section-lg">
+      <section id="good-places" className="mb-section-lg">
         <div className="space-y-content-lg">
           <BlurFade delay={BLUR_FADE_DELAY * 29}>
           <div className="flex flex-col items-center justify-center space-y-4 text-center">
             <div className="space-y-2">
               <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
-                Best parts of Hong Kong.
+                Good Places.
               </h2>
               <p className="text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                A collection of my favorite spots and activities in the city I call home.
+                A collection of my favourite spots through the years.
               </p>
             </div>
           </div>
         </BlurFade>
           <HongKongMap delay={BLUR_FADE_DELAY * 30} />
         </div>
-      </section> */}
+      </section>
 
       <section id="world" className="mb-section-lg">
         <div className="space-y-content-lg">
@@ -272,7 +272,9 @@ export default function Page() {
         </div>
       </section>
 
+      <section id="contact" className="mb-section-lg">
       <ContactOrbiting delay={BLUR_FADE_DELAY * 33} />
+      </section>
     </main>
   );
 }
