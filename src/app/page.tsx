@@ -68,7 +68,7 @@ export default function Page() {
           <div className="space-y-content-sm">
         <BlurFade delay={BLUR_FADE_DELAY * 11}>
           <p className="prose max-w-full text-pretty font-sans text-sm text-muted-foreground dark:prose-invert">
-            Born and raised in Hong Kong, I have called Melbourne, Australia home for the past seven years. Fascinated by the elegance of the fundamental principles of the natural world, I pursued a degree in Mathematics and Physics, where I was introduced to a range of wonderful theories.
+            Born and raised in Hong Kong, I have called Melbourne home for the past seven years. Fascinated by the elegance of nature&apos;s underlying principles, I pursued a degree in Mathematics and Physics, where I was introduced to a range of wonderful theories.
           </p>
         </BlurFade>
         <BlurFade delay={BLUR_FADE_DELAY * 12}>
@@ -186,6 +186,7 @@ export default function Page() {
           </div>
         </div>
       </section> */}
+      
 
       <section id="github" className="mb-section-lg">
         <GitHubContributions username="carson-young" delay={BLUR_FADE_DELAY * 24} />
@@ -235,7 +236,7 @@ export default function Page() {
         </div>
       </section>
 
-      <section id="hong-kong" className="mb-section-lg">
+      {/* <section id="hong-kong" className="mb-section-lg">
         <div className="space-y-content-lg">
           <BlurFade delay={BLUR_FADE_DELAY * 29}>
           <div className="flex flex-col items-center justify-center space-y-4 text-center">
@@ -251,7 +252,7 @@ export default function Page() {
         </BlurFade>
           <HongKongMap delay={BLUR_FADE_DELAY * 30} />
         </div>
-      </section>
+      </section> */}
 
       <section id="world" className="mb-section-lg">
         <div className="space-y-content-lg">

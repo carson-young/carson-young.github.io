@@ -16,7 +16,6 @@ export const DATA = {
   navbar: [
     { href: "/", icon: HomeIcon, label: "Home" },
     { href: "/blog", icon: NotebookIcon, label: "Blog" },
-    { href: "/showcase", icon: SparklesIcon, label: "Showcase" },
   ],
   contact: {
     email: "haileycheng@proton.me",
@@ -71,7 +70,7 @@ export const DATA = {
       end: "Nov 2023",
       bullets: [
         "Worked with senior hospital management to introduce modern data-driven methods over outdated systems.",
-        "Analysed 4 years of surgical waitlist and theatre schdule data to identify specialty-level trends. In particular, focusing on Orthopaedic and General Surgery.",
+        "Analysed 4 years of surgical waitlist and theatre schedule data to identify specialty-level trends. In particular, focusing on Orthopaedic and General Surgery.",
         "Built ML models predicting surgery duration. Forecasted patient waitlists using ARIMA and Prophet."
       ],
     },
