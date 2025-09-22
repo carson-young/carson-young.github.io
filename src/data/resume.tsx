@@ -8,7 +8,7 @@ export const DATA = {
   location: "Melbourne",
   locationLink: "https://www.google.com/maps/place/melbourne",
   description:
-    "A Data Scientist specialising in spatio-temporal analytics and economic modelling. I have contributed to over 30 projects across Australia and internationally. Projects I worked on include event impact analysis, mobility data mapping, and machine learning surgical demand modelling. Experienced in maintaining ETL pipelines and processing large-scale mobility datasets.",
+    "A Data Scientist specialising in spatio-temporal data analysis and economic modelling. I have contributed to over 30 projects across Australia and internationally. Projects I worked on include event impact analysis, mobility data mapping, and machine learning surgical demand modelling. Experienced in maintaining ETL pipelines and processing large-scale mobility datasets.",
   summary:
     "Born and raised in Hong Kong, Carson has called Melbourne home for the past seven years. He studied Applied Mathematics and Physics at the University of Melbourne. Initially drawn to a career in research, he found greater fulfilment in Data Science. He is currently a Data Scientist at a Melbourne-based consultancy, specializing in Spatio-Temporal Statistics and mobility data analytics. Carson has contributed to over 30 projects across Australia, spanning economic development, transport planning, and state government policy. He is experienced in time series forecasting, economic impact assessment, COVID-19 modelling, and processing large-scale mobility datasets",
   avatarUrl: "/cy-small_sq.png",
@@ -16,11 +16,10 @@ export const DATA = {
   navbar: [
     { href: "/", icon: HomeIcon, label: "Home" },
     { href: "/blog", icon: NotebookIcon, label: "Blog" },
-    { href: "/showcase", icon: SparklesIcon, label: "Showcase" },
   ],
   contact: {
-    email: "haileycheng@proton.me",
-    tel: "+852-XXX-XXX-XXX",
+    email: "carsonyoungks@proton.me",
+    tel: "+61 x xxxx xxxx",
     social: {
       GitHub: {
         name: "GitHub",
@@ -37,7 +36,7 @@ export const DATA = {
 
       email: {
         name: "Send Email",
-        url: "mailto:haileycheng@proton.me",
+        url: "mailto:carsonyoungks@proton.me",
         icon: Icons.email,
         navbar: false,
       },
@@ -55,9 +54,24 @@ export const DATA = {
       start: "Jan 2023",
       end: "Present",
       bullets: [
-        "Curated real-time expenditure insights to 100+ local governments through Spendmapp, a subscription-based SaaS platform powered by card transaction data",
-        "Co-developed the first-ever methodology to measure the Human Development Index at the sub-national level for Australian local government areas",
-        "Collaborated with an international team to build and maintain big data pipelines (DuckDB, H3) to ingest mobile ping data for advanced spatial analytics, supporting government policy-making."
+        "Curated real-time expenditure insights for 100+ local governments through Spendmapp, a subscription-based SaaS platform powered by card transaction data",
+        "Co-developed the first methodology to measure the Human Development Index at the sub-national level for Australian local government areas",
+        "Collaborated with an international team to build and maintain big data pipelines (DuckDB, H3) for ingesting mobile ping data, enabling advanced spatial analytics to support government policy-making"
+      ],
+    },
+      {
+      company: "The University of Melbourne & Central Coast Local Health District",
+      href: "https://www.cclhd.health.nsw.gov.au/",
+      badges: [],
+      location: "Melbourne, Australia",
+      title: "Capstone Project Student Lead",
+      logoUrl: "/nsw_health_logo.jpg",
+      start: "Mar 2023",
+      end: "Nov 2023",
+      bullets: [
+        "Worked with senior hospital management to introduce modern data-driven methods over outdated systems",
+        "Analysed four years of surgical waitlist and theatre schedule data to identify specialty-level trends, with a focus on Orthopaedic and General Surgery",
+        "Built ML models to predict surgery duration and forecasted patient waitlists using ARIMA and Prophet"
       ],
     },
 
@@ -194,8 +208,8 @@ export const DATA = {
           number: 3,
         },
         {
-          title: "The Man Who Loved Only Numbers (Paul Erdős)",
-          author: "Paul Hoffman",
+          title: "A Brief History of Time",
+          author: "Stephen Hawking",
           number: 4,
         },
       ],

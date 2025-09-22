@@ -7,7 +7,7 @@ import { ExternalLink, Search, Filter } from "lucide-react";
 
 export const metadata = {
   title: "Blog",
-  description: "My thoughts on software development, life, and more.",
+  description: "My thoughts on data science, life, and more.",
 };
 
 const BLUR_FADE_DELAY = 0.04;
@@ -17,7 +17,7 @@ const CATEGORIES = {
   "all": "All Posts",
   "website-development": "Website Development",
   "life-thoughts": "Life & Thoughts", 
-  "medium-articles": "Medium Articles"
+  "medium-articles": "LinkedIn Articles"
 };
 
 // Function to categorize posts
@@ -85,7 +85,7 @@ export default async function BlogPage() {
         <div className="mb-16 text-center">
           <h1 className="font-semibold text-4xl mb-3 tracking-tight">Blog</h1>
           <p className="text-lg text-muted-foreground leading-relaxed">
-            Thoughts on software development, technology, and life in Hong Kong.
+            Thoughts on data science, technology, and life in Australia.
           </p>
         </div>
       </BlurFade>
@@ -170,7 +170,7 @@ export default async function BlogPage() {
                         ))}
                         {post.isExternal && (
                           <span className="text-xs px-3 py-1 rounded-full bg-muted/50 text-muted-foreground font-medium">
-                            Medium
+                            LinkedIn
                           </span>
                         )}
                       </div>

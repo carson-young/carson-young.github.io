@@ -46,7 +46,7 @@ export const TimelineItem = ({
   bullets,
   isLast = false,
 }: TimelineItemProps) => {
-  const [isExpanded, setIsExpanded] = React.useState(false);
+  const [isExpanded, setIsExpanded] = React.useState(true);
 
   const handleClick = (e: React.MouseEvent) => {
     if (description || bullets) {

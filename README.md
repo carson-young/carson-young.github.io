@@ -1,6 +1,8 @@
 # My Personal Website
 
-Hey there! Welcome to the codebase for my personal website. What started as a fork of the awesome [dillionverma/portfolio](https://github.com/dillionverma/portfolio) has grown into something I like to call my digital playground.
+Hey there! Welcome to the codebase for my personal website. This template was originally by the awesome [dillionverma/portfolio](https://github.com/dillionverma/portfolio) and supercharged by [heilcheng/heilcheng.github.io](https://github.com/heilcheng/heilcheng.github.io). I then adapted it further for my own use. 
+
+A big thanks to both projects, it's been incredibly handy for a data scientist with limited frontend experience!
 
 This portfolio is built with Next.js, styled with Tailwind CSS, and brought to life with Three.js and Framer Motion. It's automatically deployed to GitHub Pages, so it's always up-to-date with my latest experiments.
 
@@ -15,19 +17,6 @@ This portfolio is built with Next.js, styled with Tailwind CSS, and brought to l
 ## Features: The Fun Stuff
 
 I wanted this site to be a reflection of my personality and passions. Here are some of the key features I've built:
-
-### Interactive 3D Visualizations:
-
-- **Rubik's Cube Solver** (`/src/components/rubiks-cube.tsx`): A fully interactive 3D Rubik's Cube that visualizes the CFOP solving method. It's a nod to my love for algorithms and puzzles, breaking down the solution into the Cross, F2L, OLL, and PLL stages.
-  - Color scheme: U=W, D=Y, L=O, R=R, F=G, B=B.
-  - Notation: quarter turns and inverses: `U U' U2 D D' D2 L L' L2 R R' R2 F F' F2 B B' B2`.
-  - Speed: use the speed slider to tweak ms per quarter turn (150–600ms).
-  - Solver: currently animates a correct visual solution segmented by CFOP phases; full two-look OLL/PLL planner is modularized under `src/lib/cfop-solver.ts` for iteration.
-  - Limitations: not speed optimal; highlights emphasize U-layer during OLL/PLL; cross/F2L pair highlights are minimal.
-
-- **Protein Folding Viewer** (`/src/components/protein-folding.tsx`): Inspired by AlphaFold, this visualizer shows how a protein chain folds into its complex 3D structure. The colors represent pLDDT confidence scores, and it even includes a Predicted Aligned Error (PAE) plot.
-
-- **Torus-Mug Morph** (`/src/components/torus-mug-morph.tsx`): A fun, interactive demo of topological equivalence. A slider lets you seamlessly morph a 3D torus (a doughnut) into a coffee mug and back again.
 
 ### Data-Driven Maps:
 
@@ -66,8 +55,8 @@ If you like what you see and want to build your own version, feel free to use th
 Fork the repository and clone it to your local machine.
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/heilcheng.github.io.git
-cd heilcheng.github.io
+git clone https://github.com/YOUR_USERNAME/carson-young.github.io.git
+cd carson-young.github.io
 ```
 
 ### 2. Install Dependencies

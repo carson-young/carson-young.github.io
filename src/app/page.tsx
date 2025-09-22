@@ -68,7 +68,7 @@ export default function Page() {
           <div className="space-y-content-sm">
         <BlurFade delay={BLUR_FADE_DELAY * 11}>
           <p className="prose max-w-full text-pretty font-sans text-sm text-muted-foreground dark:prose-invert">
-            Born and raised in Hong Kong, I have called Melbourne, Australia home for the past seven years. Fascinated by the elegance of the fundamental principles of the natural world, I pursued a degree in Mathematics and Physics, where I was introduced to a range of wonderful theories.
+            Born and raised in Hong Kong, I have called Melbourne home for the past seven years. Fascinated by the elegance of nature&apos;s underlying principles, I pursued a degree in Mathematics and Physics, where I was introduced to a range of wonderful theories.
           </p>
         </BlurFade>
         <BlurFade delay={BLUR_FADE_DELAY * 12}>
@@ -186,6 +186,7 @@ export default function Page() {
           </div>
         </div>
       </section> */}
+      
 
       <section id="github" className="mb-section-lg">
         <GitHubContributions username="carson-young" delay={BLUR_FADE_DELAY * 24} />
@@ -235,16 +236,16 @@ export default function Page() {
         </div>
       </section>
 
-      <section id="hong-kong" className="mb-section-lg">
+      <section id="good-places" className="mb-section-lg">
         <div className="space-y-content-lg">
           <BlurFade delay={BLUR_FADE_DELAY * 29}>
           <div className="flex flex-col items-center justify-center space-y-4 text-center">
             <div className="space-y-2">
               <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
-                Best parts of Hong Kong.
+                Good Places.
               </h2>
               <p className="text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                A collection of my favorite spots and activities in the city I call home.
+                A collection of my favourite spots through the years.
               </p>
             </div>
           </div>
@@ -271,7 +272,9 @@ export default function Page() {
         </div>
       </section>
 
+      <section id="contact" className="mb-section-lg">
       <ContactOrbiting delay={BLUR_FADE_DELAY * 33} />
+      </section>
     </main>
   );
 }
