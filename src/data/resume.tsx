@@ -60,6 +60,21 @@ export const DATA = {
         "Collaborated with an international team to build and maintain big data pipelines (DuckDB, H3) to ingest mobile ping data for advanced spatial analytics, supporting government policy-making."
       ],
     },
+      {
+      company: "The University of Melbourne & Central Coast Local Health District",
+      href: "https://www.cclhd.health.nsw.gov.au/",
+      badges: [],
+      location: "Melbourne, Australia",
+      title: "Capstone Project Student Lead",
+      logoUrl: "/nsw_health_logo.jpg",
+      start: "Mar 2023",
+      end: "Nov 2023",
+      bullets: [
+        "Worked with senior hospital management to introduce modern data-driven methods over outdated systems.",
+        "Analysed 4 years of surgical waitlist and theatre schdule data to identify specialty-level trends. In particular, focusing on Orthopaedic and General Surgery.",
+        "Built ML models predicting surgery duration. Forecasted patient waitlists using ARIMA and Prophet."
+      ],
+    },
 
   ],
   education: [
@@ -194,8 +209,8 @@ export const DATA = {
           number: 3,
         },
         {
-          title: "The Man Who Loved Only Numbers (Paul Erdős)",
-          author: "Paul Hoffman",
+          title: "A Brief History of Time",
+          author: "Stephen Hawking",
           number: 4,
         },
       ],
