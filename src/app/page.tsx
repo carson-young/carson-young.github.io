@@ -145,7 +145,7 @@ export default function Page() {
       </section>
 
       <section id="tech-stack" className="mb-section-lg">
-        <TechStack delay={BLUR_FADE_DELAY * 21} />
+        <TechStack delay={BLUR_FADE_DELAY * 5} />
       </section>
 
       <section id="projects" className="mb-section-lg">
@@ -271,7 +271,7 @@ export default function Page() {
       </section>
 
       <section id="contact" className="mb-section-lg">
-      <ContactOrbiting delay={BLUR_FADE_DELAY * 33} />
+      <ContactOrbiting delay={BLUR_FADE_DELAY * 5} />
       </section>
     </main>
   );

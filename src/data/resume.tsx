@@ -15,8 +15,8 @@ export const DATA = {
 
   navbar: [
     { href: "/", icon: HomeIcon, label: "Home" },
-    { href: "/blog", icon: NotebookIcon, label: "Blog" },
     { href: "/showcase", icon: SparklesIcon, label: "Showcase" },
+    { href: "/blog", icon: NotebookIcon, label: "Blog" },
   ],
   contact: {
     email: "carsonyoungks@proton.me",
@@ -122,7 +122,7 @@ export const DATA = {
     },
     {
       title: "Mobility Data Indexing and Query",
-      href: "",
+      href: "/showcase",
       dates: "2024 - Present",
       active: true,
       description:
@@ -138,6 +138,11 @@ export const DATA = {
           type: "Interactive Map",
           href: "/showcase",
           icon: <Icons.globe className="size-3" />,
+        },
+        {
+          type: "H3 Tools",
+          href: "https://github.com/sabman/h3-utils",
+          icon: <Icons.github className="size-3" />,
         },
       ],
       image: "",
