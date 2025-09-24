@@ -97,93 +97,83 @@ export const DATA = {
   ],
   projects: [
     {
-      title: "MEQ-Bench",
-      href: "https://github.com/heilcheng/MEQ-Bench",
-      dates: "2024 - Present",
+      title: "Expenditure Forecasting",
+      href: "",
+      dates: "2023 - Present",
       active: true,
       description:
-        "The first benchmark designed to evaluate an LLM's ability to generate audience-adaptive medical explanations for diverse stakeholders, including physicians, nurses, and patients.",
+        "Monthly consumer expenditure forecasting for Australian LGAs using seasonal ARIMA and Prophet.",
       technologies: [
-        "Python",
-        "LLM",
-        "Medical AI",
-        "Benchmarking",
+        "R",
+        "ARIMA",
+        "Prophet",
+        "tsibble",
       ],
       links: [
         {
-          type: "Source",
-          href: "https://github.com/heilcheng/MEQ-Bench",
-          icon: <Icons.github className="size-3" />,
+          type: "Article",
+          href: "https://www.linkedin.com/pulse/forecasting-christmas-spending-rough-holiday-season-ahead-young-ecm3c",
+          icon: <Icons.globe className="size-3" />,
+        },
+
+      ],
+      image: "",
+      video: "",
+    },
+    {
+      title: "Mobility Data Indexing and Query",
+      href: "",
+      dates: "2024 - Present",
+      active: true,
+      description:
+        "Developed a mobility data pipeline and indexing system using H3 and DuckDB, enabling efficient spatial queries and visualisation with kepler.gl.",
+      technologies: [
+        "H3",
+        "DuckDB",
+        "kepler.gl",
+        "Python",
+      ],
+      links: [        
+        {
+          type: "Interactive Map",
+          href: "/showcase",
+          icon: <Icons.globe className="size-3" />,
         },
       ],
       image: "",
       video: "",
     },
     {
-      title: "Gemma Benchmark Suite",
-      href: "https://github.com/heilcheng/gemma-benchmark",
-      dates: "2024 - Present",
+      title: "Bayesian Event Impact Analysis",
+      href: "",
+      dates: "2023 - Present",
       active: true,
       description:
-        "An evaluation suite for Google's Gemma models across academic LLM benchmarks, with quantization support and efficiency profiling.",
+        "Measuring event impacts with Google’s CausalImpact by generating counterfactual predictions.",
       technologies: [
-        "Python",
-        "LLM",
-        "Benchmarking",
-        "Quantization",
+        "R",
+        "Bayesian",
+        "CausalImpact",
       ],
       links: [
-        {
-          type: "Source",
-          href: "https://github.com/heilcheng/gemma-benchmark",
-          icon: <Icons.github className="size-3" />,
-        },
       ],
       image: "",
       video: "",
     },
     {
-      title: "DeepChem Drug Formulation Tutorial",
-      href: "https://github.com/heilcheng/deepchem-drug-formulation",
-      dates: "2024 - Present",
+      title: "Spendmapp Pipeline",
+      href: "",
+      dates: "2023 - Present",
       active: true,
       description:
-        "A tutorial using DeepChem for predicting key pharmaceutical properties and visualizing molecular behaviors for drug discovery.",
+        "A data pipeline for a subscription-based SaaS product that ingests, processes, and validates monthly data, built with Python and orchestrated using Prefect.",
       technologies: [
         "Python",
-        "DeepChem",
-        "Drug Discovery",
-        "Molecular Biology",
+        "Prefect",
+        "CartoDB",
+        "AWS S3",
       ],
       links: [
-        {
-          type: "Source",
-          href: "https://github.com/heilcheng/deepchem-drug-formulation",
-          icon: <Icons.github className="size-3" />,
-        },
-      ],
-      image: "",
-      video: "",
-    },
-    {
-      title: "Truth or Dare (Cantonese)",
-      href: "https://github.com/heilcheng/Truth-or-Dare-Canto",
-      dates: "2024 - Present",
-      active: true,
-      description:
-        "A Truth or Dare question generator web app built in Cantonese, using React for webapp and React Native for Apps.",
-      technologies: [
-        "React",
-        "React Native",
-        "JavaScript",
-        "Cantonese",
-      ],
-      links: [
-        {
-          type: "Source",
-          href: "https://github.com/heilcheng/Truth-or-Dare-Canto",
-          icon: <Icons.github className="size-3" />,
-        },
       ],
       image: "",
       video: "",
