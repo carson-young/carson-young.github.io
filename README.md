@@ -2,7 +2,7 @@
 
 Hey there! Welcome to the codebase for my personal website. This template was originally by the awesome [dillionverma/portfolio](https://github.com/dillionverma/portfolio) and supercharged by [heilcheng/heilcheng.github.io](https://github.com/heilcheng/heilcheng.github.io). I then adapted it further for my own use. 
 
-A big thanks to both projects, it's been incredibly handy for a data scientist with limited frontend experience!
+A big thanks to both projects, it's been incredibly handy for a data scientist with limited frontend experience! Huge shout out to my software engineer friend [Yukash Sivaraj](https://github.com/YSPlop) for his priceless advice.
 
 This portfolio is built with Next.js, styled with Tailwind CSS, and brought to life with Three.js and Framer Motion. It's automatically deployed to GitHub Pages, so it's always up-to-date with my latest experiments.
 
@@ -22,7 +22,7 @@ I wanted this site to be a reflection of my personality and passions. Here are s
 
 - **World Map** (`/src/components/world-map.tsx`): A map of my travels, built with react-simple-maps. It highlights the countries I've visited and gives you a little tooltip on hover.
 
-- **Hong Kong Map** (`/src/components/hong-kong-map.tsx`): A more personal map of my favorite spots in my home city, built with react-leaflet. I've added custom markers for my go-to nature and urban spots.
+- **Travel Highlights Map** (`/src/components/hong-kong-map.tsx`): A more personal map of my favorite travel spots, built with react-leaflet. I've added custom markers for my go-to nature and urban spots.
 
 ### Dynamic & UI Features:
 
