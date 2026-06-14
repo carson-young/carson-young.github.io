@@ -16,6 +16,7 @@ const visitedCountries = [
   "KOR", // South Korea
   "CHN", // China
   "IND", // India
+  "MYS", // Malaysia
 ];
 
 // Map of country codes to full names and categories for the word list
@@ -29,6 +30,7 @@ const countryData: { [key: string]: { name: string; category: string } } = {
   "KOR": { name: "South Korea", category: "Asia" },
   "CHN": { name: "China", category: "Asia" },
   "IND": { name: "India", category: "Asia" },
+  "MYS": { name: "Malaysia", category: "Asia" },
 };
 
 interface WorldMapProps {

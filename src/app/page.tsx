@@ -42,7 +42,7 @@ export default function Page() {
                 delay={BLUR_FADE_DELAY * 1.5}
                 className="text-sm text-muted-foreground md:text-base"
                 yOffset={8}
-                text={`Most people know me as Carson Young. In Cantonese, I'm Young Ka Shun (楊家信).`}
+                text={`Carson Young · 楊家信 · /jœːŋ kaː sɵn/`}
               />
               <BlurFadeText
                 className="max-w-[600px] text-muted-foreground md:text-xl"
