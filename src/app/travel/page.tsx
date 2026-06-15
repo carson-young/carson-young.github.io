@@ -2,8 +2,9 @@
 
 import dynamic from "next/dynamic";
 import Image from "next/image";
-import { MapPin, Calendar, Clock } from "lucide-react";
+import { MapPin, Calendar } from "lucide-react";
 import { DATA } from "@/data/resume";
+import "flag-icons/css/flag-icons.min.css";
 
 const BlurFade = dynamic(() => import("@/components/magicui/blur-fade").then(mod => mod.default), { ssr: false });
 const WorldMap = dynamic(() => import("@/components/world-map").then(mod => mod.WorldMap), { ssr: false });
@@ -13,17 +14,19 @@ const BLUR_FADE_DELAY = 0.04;
 const STATUS_STYLES = {
   upcoming: "bg-green-500/10 text-green-700 dark:text-green-400",
   planning: "bg-blue-500/10 text-blue-700 dark:text-blue-400",
-  past: "bg-muted/50 text-muted-foreground",
+  completed: "bg-muted/50 text-muted-foreground",
+  cancelled: "bg-red-500/10 text-red-700 dark:text-red-400 line-through",
 } as const;
 
 const STATUS_LABELS = {
-  upcoming: "Confirmed",
+  upcoming: "Upcoming",
   planning: "Planning",
-  past: "Visited",
+  completed: "Completed",
+  cancelled: "Cancelled",
 } as const;
 
 export default function TravelPage() {
-  const { upcomingTrips, photos } = DATA.travel;
+  const { trips, photos } = DATA.travel;
 
   return (
     <main className="flex flex-col min-h-[100dvh] py-section-md">
@@ -39,35 +42,34 @@ export default function TravelPage() {
           </div>
         </BlurFade>
 
-        {/* Upcoming & Planned Trips */}
-        {upcomingTrips.length > 0 && (
+        {/* World Tour */}
+        {trips.length > 0 && (
           <BlurFade delay={BLUR_FADE_DELAY * 2}>
             <div className="mb-16">
               <h2 className="text-2xl font-semibold tracking-tight mb-8 flex items-center gap-2">
                 <Calendar className="size-5 text-muted-foreground" />
-                Upcoming Trips
+                World Tour
               </h2>
-              <div className="space-y-4">
-                {upcomingTrips.map((trip, index) => (
-                  <BlurFade key={trip.destination} delay={BLUR_FADE_DELAY * 3 + index * 0.05}>
-                    <div className="p-6 rounded-2xl border border-border/50 hover:border-border transition-all duration-300 hover:shadow-sm hover:shadow-border/20">
-                      <div className="flex items-start justify-between gap-4">
-                        <div className="flex items-start gap-4 flex-1">
-                          <span className="text-3xl leading-none mt-0.5">{trip.flag}</span>
-                          <div className="flex-1 space-y-1.5">
-                            <div className="flex items-center gap-3 flex-wrap">
-                              <h3 className="text-xl font-medium tracking-tight">{trip.destination}</h3>
-                              <span className={`text-xs px-2.5 py-1 rounded-full font-medium ${STATUS_STYLES[trip.status]}`}>
-                                {STATUS_LABELS[trip.status]}
-                              </span>
-                            </div>
-                            <p className="text-muted-foreground leading-relaxed text-sm">{trip.description}</p>
+              <div className="space-y-3">
+                {(trips as unknown as Array<{ destination: string; countryCode: string; dates: string; description: string; status: keyof typeof STATUS_STYLES }>).map((trip, index) => (
+                  <BlurFade key={`${trip.destination}-${trip.dates}`} delay={BLUR_FADE_DELAY * 3 + index * 0.03}>
+                    <div className="px-5 py-4 rounded-xl border border-border/50 hover:border-border transition-all duration-300">
+                      <div className="flex items-center gap-4">
+                        <span className={`fi fi-${trip.countryCode} rounded-sm flex-shrink-0`} style={{ width: '1.5rem', height: '1.125rem', display: 'inline-block' }} />
+                        <div className="flex-1 min-w-0">
+                          <div className="flex items-center gap-2.5 flex-wrap">
+                            <span className="font-medium tracking-tight">{trip.destination}</span>
+                            <span className={`text-xs px-2 py-0.5 rounded-full font-medium ${STATUS_STYLES[trip.status]}`}>
+                              {STATUS_LABELS[trip.status]}
+                            </span>
                           </div>
+                          {trip.description && (
+                            <p className="text-muted-foreground text-sm mt-1 leading-relaxed">{trip.description}</p>
+                          )}
                         </div>
-                        <div className="flex items-center gap-1.5 text-sm text-muted-foreground font-medium whitespace-nowrap flex-shrink-0">
-                          <Clock className="size-3.5" />
+                        <time className="text-sm text-muted-foreground tabular-nums whitespace-nowrap flex-shrink-0">
                           {trip.dates}
-                        </div>
+                        </time>
                       </div>
                     </div>
                   </BlurFade>
@@ -88,7 +90,7 @@ export default function TravelPage() {
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 {(photos as unknown as Array<{ src: string; location: string; caption?: string }>).map((photo, index) => (
                   <BlurFade key={photo.src} delay={BLUR_FADE_DELAY * 5 + index * 0.04}>
-                    <div className="group relative overflow-hidden rounded-xl border border-border/50 hover:border-border transition-all duration-300 aspect-[4/3]">
+                    <div className="group relative overflow-hidden rounded-xl border border-border/50 hover:border-border transition-all duration-300 aspect-[2/3]">
                       <Image
                         src={photo.src}
                         alt={photo.caption ?? photo.location}
@@ -111,7 +113,7 @@ export default function TravelPage() {
         )}
 
         {/* Empty state for photos */}
-        {photos.length === 0 && (
+        {(photos as unknown as unknown[]).length === 0 && (
           <BlurFade delay={BLUR_FADE_DELAY * 4}>
             <div className="mb-16">
               <h2 className="text-2xl font-semibold tracking-tight mb-8 flex items-center gap-2">
