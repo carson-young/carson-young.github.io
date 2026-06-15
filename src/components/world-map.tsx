@@ -138,7 +138,7 @@ export const WorldMap = ({ delay }: WorldMapProps) => {
               </ComposableMap>
               {/* Tooltip for hovered country */}
               {hoveredCountry && (
-                <div className="absolute left-1/2 top-2 transform -translate-x-1/2 bg-white bg-opacity-90 text-blue-700 px-4 py-2 rounded-lg shadow text-center pointer-events-none z-10">
+                <div className="absolute left-1/2 top-2 transform -translate-x-1/2 bg-background/90 text-foreground border border-border px-4 py-2 rounded-lg shadow text-center pointer-events-none z-10">
                   <span className="font-semibold text-base">{hoveredCountry}</span>
                 </div>
               )}
