@@ -128,7 +128,7 @@ export default function Page() {
           </BlurFade>
           <div className="space-y-0">
           {DATA.education.map((education, id) => (
-              <BlurFade key={education.school} delay={BLUR_FADE_DELAY * 20 + id * 0.05}>
+              <BlurFade key={education.degree} delay={BLUR_FADE_DELAY * 20 + id * 0.05}>
                 <TimelineItem
                 logoUrl={education.logoUrl}
                 altText={education.school}
