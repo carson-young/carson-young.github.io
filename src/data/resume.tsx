@@ -1,5 +1,5 @@
 import { Icons } from "@/components/icons";
-import { HomeIcon, NotebookIcon, SparklesIcon } from "lucide-react";
+import { HomeIcon, NotebookIcon, SparklesIcon, Plane } from "lucide-react";
 
 export const DATA = {
   name: "Carson Young",
@@ -17,6 +17,7 @@ export const DATA = {
     { href: "/", icon: HomeIcon, label: "Home" },
     { href: "/showcase", icon: SparklesIcon, label: "Showcase" },
     { href: "/blog", icon: NotebookIcon, label: "Blog" },
+    { href: "/travel", icon: Plane, label: "Travel" },
   ],
   contact: {
     email: "carsonyoungks@proton.me",
@@ -256,6 +257,136 @@ export const DATA = {
       ],
     },
   ],
+  travel: {
+    trips: [
+      {
+        destination: "Hong Kong",
+        countryCode: "hk",
+        dates: "2 Jan 2026",
+        description: "",
+        status: "completed" as const,
+      },
+      {
+        destination: "Penang",
+        countryCode: "my",
+        dates: "26 Jan 2026",
+        description: "",
+        status: "completed" as const,
+      },
+      {
+        destination: "Wellington",
+        countryCode: "nz",
+        dates: "7 Mar 2026",
+        description: "",
+        status: "completed" as const,
+      },
+      {
+        destination: "Sydney",
+        countryCode: "au",
+        dates: "28 Mar 2026",
+        description: "",
+        status: "completed" as const,
+      },
+      {
+        destination: "Taipei",
+        countryCode: "tw",
+        dates: "1 Apr 2026",
+        description: "",
+        status: "completed" as const,
+      },
+      {
+        destination: "London",
+        countryCode: "gb",
+        dates: "26 Apr 2026",
+        description: "",
+        status: "cancelled" as const,
+      },
+      {
+        destination: "Adelaide",
+        countryCode: "au",
+        dates: "9 May 2026",
+        description: "",
+        status: "completed" as const,
+      },
+      {
+        destination: "Auckland",
+        countryCode: "nz",
+        dates: "20 May 2026",
+        description: "",
+        status: "completed" as const,
+      },
+      {
+        destination: "Seoul",
+        countryCode: "kr",
+        dates: "6 Jun 2026",
+        description: "",
+        status: "completed" as const,
+      },
+      {
+        destination: "Hong Kong",
+        countryCode: "hk",
+        dates: "10 Jun 2026",
+        description: "",
+        status: "completed" as const,
+      },
+      {
+        destination: "Falls Creek",
+        countryCode: "au",
+        dates: "19 Jun 2026",
+        description: "",
+        status: "upcoming" as const,
+      },
+      {
+        destination: "Jakarta",
+        countryCode: "id",
+        dates: "19 Sep 2026",
+        description: "",
+        status: "upcoming" as const,
+      },
+      {
+        destination: "Adelaide",
+        countryCode: "au",
+        dates: "11 Oct 2026",
+        description: "",
+        status: "upcoming" as const,
+      },
+      {
+        destination: "Berlin & Munich",
+        countryCode: "de",
+        dates: "1 Nov 2026",
+        description: "",
+        status: "upcoming" as const,
+      },
+      {
+        destination: "Kaohsiung",
+        countryCode: "tw",
+        dates: "29 Dec 2026",
+        description: "",
+        status: "upcoming" as const,
+      },
+      {
+        destination: "Nadi",
+        countryCode: "fj",
+        dates: "23 Jan 2027",
+        description: "",
+        status: "upcoming" as const,
+      },
+      {
+        destination: "Sheffield",
+        countryCode: "gb",
+        dates: "18 Apr 2027",
+        description: "",
+        status: "upcoming" as const,
+      },
+    ],
+    photos: [
+      {
+        src: "/travel/taipei-jiantan.jpg",
+        location: "劍潭山, Taipei",
+        caption: "Taipei skyline and Taipei 101 from Jiantan Mountain, April 2026",
+      },
+    ],
+  },
 } as const;
 
 
