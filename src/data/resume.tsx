@@ -1,5 +1,5 @@
 import { Icons } from "@/components/icons";
-import { HomeIcon, NotebookIcon, SparklesIcon } from "lucide-react";
+import { HomeIcon, NotebookIcon, SparklesIcon, MapIcon } from "lucide-react";
 
 export const DATA = {
   name: "Carson Young",
@@ -17,6 +17,7 @@ export const DATA = {
     { href: "/", icon: HomeIcon, label: "Home" },
     { href: "/showcase", icon: SparklesIcon, label: "Showcase" },
     { href: "/blog", icon: NotebookIcon, label: "Blog" },
+    { href: "/travel", icon: MapIcon, label: "Travel" },
   ],
   contact: {
     email: "carsonyoungks@proton.me",
@@ -256,6 +257,30 @@ export const DATA = {
       ],
     },
   ],
+  travel: {
+    upcomingTrips: [
+      {
+        destination: "Hong Kong",
+        country: "HKG",
+        flag: "🇭🇰",
+        dates: "Jul 2025",
+        description: "Back home to visit family and friends. Looking forward to the food, the MTR, and the harbour views.",
+        status: "upcoming" as const,
+      },
+      {
+        destination: "Japan",
+        country: "JPN",
+        flag: "🇯🇵",
+        dates: "TBD 2025",
+        description: "Planning a trip to explore Kyoto, Osaka, and hopefully some countryside towns.",
+        status: "planning" as const,
+      },
+    ],
+    photos: [
+      // Add photos as: { src: "/travel/your-image.jpg", location: "Location Name", caption: "Optional caption" }
+      // Place images in the /public/travel/ directory
+    ],
+  },
 } as const;
 
 
