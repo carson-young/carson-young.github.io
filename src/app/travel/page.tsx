@@ -53,25 +53,21 @@ export default function TravelPage() {
               <div className="space-y-3">
                 {(trips as unknown as Array<{ destination: string; countryCode: string; dates: string; description: string; status: keyof typeof STATUS_STYLES }>).map((trip, index) => (
                   <BlurFade key={`${trip.destination}-${trip.dates}`} delay={BLUR_FADE_DELAY * 3 + index * 0.03}>
-                    <div className="px-5 py-4 rounded-xl border border-border/50 hover:border-border transition-all duration-300">
-                      <div className="flex items-center gap-4">
-                        <span className={`fi fi-${trip.countryCode} rounded-sm flex-shrink-0`} style={{ width: '1.5rem', height: '1.125rem', display: 'inline-block' }} />
-                        <div className="flex-1 min-w-0">
-                          <div className="flex items-center gap-2.5 flex-wrap">
-                            <span className="font-medium tracking-tight">{trip.destination}</span>
-                            <span className={`text-xs px-2 py-0.5 rounded-full font-medium ${STATUS_STYLES[trip.status]}`}>
-                              {STATUS_LABELS[trip.status]}
-                            </span>
-                          </div>
-                          {trip.description && (
-                            <p className="text-muted-foreground text-sm mt-1 leading-relaxed">{trip.description}</p>
-                          )}
-                        </div>
-                        <time className="text-sm text-muted-foreground tabular-nums whitespace-nowrap flex-shrink-0">
-                          {trip.dates}
-                        </time>
-                      </div>
-                    </div>
+              <div className="px-5 py-4 rounded-xl border border-border/50 hover:border-border transition-all duration-300">
+                <div className="flex items-center gap-4">
+                  <span className={`fi fi-${trip.countryCode} rounded-sm flex-shrink-0`}
+                    style={{ width: '1.5rem', height: '1.125rem', display: 'inline-block' }} />
+                  <span className="font-medium tracking-tight flex-1">{trip.destination}</span>
+                  <div className="flex flex-col items-end gap-1 flex-shrink-0">
+                    <time className="text-sm text-muted-foreground tabular-nums">
+                      {trip.dates}
+                    </time>
+                    <span className={`text-xs px-2 py-0.5 rounded-full font-medium ${STATUS_STYLES[trip.status]}`}>
+                      {STATUS_LABELS[trip.status]}
+                    </span>
+                  </div>
+                </div>
+              </div>
                   </BlurFade>
                 ))}
               </div>
