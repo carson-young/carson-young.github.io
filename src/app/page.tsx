@@ -99,10 +99,10 @@ export default function Page() {
       <section id="work" className="mb-section-lg">
         <div className="space-y-12">
           <BlurFade delay={BLUR_FADE_DELAY * 17}>
-            <h2 className="text-xl font-bold">Technical Experience</h2>
+            <h2 className="text-xl font-bold">Professional Experience</h2>
           </BlurFade>
           <div className="space-y-0">
-          {DATA.technicalExperience.map((work, id) => (
+          {DATA.professionalExperience.map((work, id) => (
               <BlurFade key={work.company} delay={BLUR_FADE_DELAY * 18 + id * 0.05}>
                 <TimelineItem
                 logoUrl={work.logoUrl}
@@ -113,7 +113,7 @@ export default function Page() {
                 badges={work.badges}
                 period={`${work.start} - ${work.end ?? "Present"}`}
                 bullets={work.bullets}
-                  isLast={id === DATA.technicalExperience.length - 1}
+                  isLast={id === DATA.professionalExperience.length - 1}
               />
             </BlurFade>
           ))}

@@ -8,9 +8,9 @@ export const DATA = {
   location: "Melbourne",
   locationLink: "https://www.google.com/maps/place/melbourne",
   description:
-    "A Data Scientist specialising in spatio-temporal data analysis and economic modelling. I have contributed to over 30 projects across Australia and internationally. Projects I worked on include event impact analysis, mobility data mapping, and machine learning surgical demand modelling. Experienced in maintaining ETL pipelines and processing large-scale mobility datasets.",
+    "Data Scientist with 3+ years building and deploying machine learning and forecasting models across economic modelling, public policy and healthcare projects, including production pipelines on Westpac transaction data. I've contributed to over 40 projects across Australia, applying causal inference techniques such as propensity score matching, instrumental variables, and Bayesian counterfactual predictions. Experienced in ETL pipelines and technologies like AWS and DuckDB for large-scale mobility datasets.",
   summary:
-    "Born and raised in Hong Kong, Carson has called Melbourne home for the past seven years. He studied Applied Mathematics and Physics at the University of Melbourne. Initially drawn to a career in research, he found greater fulfilment in Data Science. He is currently a Data Scientist at a Melbourne-based consultancy, specializing in Spatio-Temporal Statistics and mobility data analytics. Carson has contributed to over 30 projects across Australia, spanning economic development, transport planning, and state government policy. He is experienced in time series forecasting, economic impact assessment, COVID-19 modelling, and processing large-scale mobility datasets",
+    "Born and raised in Hong Kong, Carson has called Melbourne home for the past seven years. He studied Mathematical Physics at the University of Melbourne, touching on epidemiological modelling along the way, before finding his way into Data Science through a Master's degree. He is currently a Data Scientist at a Melbourne based consultancy, specialising in spatio-temporal statistics and mobility data analytics. Carson has contributed to over 40 projects across Australia, spanning economic development, transport planning, and state government policy, with over three years building, evaluating, and deploying machine learning and forecasting models, including production pipelines on Westpac transaction data. He applies causal inference techniques such as propensity score matching, instrumental variables, and Bayesian time series models.",
   avatarUrl: "/cy-small_sq.png",
 
   navbar: [
@@ -45,7 +45,7 @@ export const DATA = {
     },
   },
 
-  technicalExperience: [
+  professionalExperience: [
     {
       company: "Geografia",
       href: "https://geografia.com.au/",
@@ -56,9 +56,11 @@ export const DATA = {
       start: "Jan 2023",
       end: "Present",
       bullets: [
-        "Curated real-time expenditure insights for 100+ local governments through Spendmapp, a subscription-based SaaS platform powered by card transaction data",
-        "Co-developed the first methodology to measure the Human Development Index at the sub-national level for Australian local government areas",
-        "Collaborated with an international team to build and maintain big data pipelines (DuckDB, H3) for ingesting mobile ping data, enabling advanced spatial analytics to support government policy-making"
+        "Built and operate the production pipelines behind Spendmapp, a SaaS platform delivering real time economic insights to 100+ local governments, powered by Westpac DataX transaction data",
+        "Work with Geografia's in-house economics team on inferential methods, including propensity score matching and instrumental variables, applied to state government education and transport policy and to consumer spending behaviour",
+        "Led the migration of a legacy Python expenditure forecasting framework to the Nixtla ecosystem, cutting processing time by approximately 80%",
+        "Prepare and cleanse large transactional and spatial datasets; optimise SQL in DuckDB (spatial joins, H3 indexing) for large scale analysis",
+        "Built Australia's first sub-national Human Development Index, owning the measurement design from index construction through to validation against UN benchmarks"
       ],
     },
       {
@@ -71,9 +73,9 @@ export const DATA = {
       start: "Mar 2023",
       end: "Nov 2023",
       bullets: [
-        "Worked with senior hospital management to introduce modern data-driven methods over outdated systems",
-        "Analysed four years of surgical waitlist and theatre schedule data to identify specialty-level trends, with a focus on Orthopaedic and General Surgery",
-        "Built ML models to predict surgery duration and forecasted patient waitlists using ARIMA and Prophet"
+        "Led a consulting engagement with Gosford and Wyong Hospitals on surgical demand and theatre utilisation, working with senior hospital management to bring modern data-driven methods to legacy planning processes",
+        "Analysed 4+ years of surgical waitlist and theatre scheduling data to identify specialty-level trends, with a focus on Orthopaedic and General Surgery",
+        "Built triage classification and patient clustering models, plus surgery duration and waitlist forecasts (ARIMA, Prophet), to support forward planning"
       ],
     },
 
@@ -116,6 +118,11 @@ export const DATA = {
           href: "https://www.linkedin.com/pulse/forecasting-christmas-spending-rough-holiday-season-ahead-young-ecm3c",
           icon: <Icons.globe className="size-3" />,
         },
+        {
+          type: "Nixtla",
+          href: "https://nixtla.io",
+          icon: <Icons.globe className="size-3" />,
+        },
 
       ],
       image: "",
@@ -144,6 +151,16 @@ export const DATA = {
           type: "H3 Tools",
           href: "https://github.com/sabman/h3-utils",
           icon: <Icons.github className="size-3" />,
+        },
+        {
+          type: "DuckDB",
+          href: "https://duckdb.org",
+          icon: <Icons.globe className="size-3" />,
+        },
+        {
+          type: "LinkedIn Post",
+          href: "https://www.linkedin.com/posts/carson-young-954187222_geospatial-mobilitydata-datascience-ugcPost-7480413238094979072-5SRs/?utm_source=share&utm_medium=member_desktop&rcm=ACoAADfpKJABTEXAw9c53pQOUuPpwJyWhLvLciU",
+          icon: <Icons.linkedin className="size-3" />,
         },
       ],
       image: "",
