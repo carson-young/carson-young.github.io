@@ -17,6 +17,7 @@ const visitedCountries = [
   "CHN", // China
   "IND", // India
   "MYS", // Malaysia
+  "IDN", // Indonesia
 ];
 
 // Map of country codes to full names and categories for the word list
@@ -31,6 +32,7 @@ const countryData: { [key: string]: { name: string; category: string } } = {
   "CHN": { name: "China", category: "Asia" },
   "IND": { name: "India", category: "Asia" },
   "MYS": { name: "Malaysia", category: "Asia" },
+  "IDN": { name: "Indonesia", category: "Asia" },
 };
 
 interface WorldMapProps {
