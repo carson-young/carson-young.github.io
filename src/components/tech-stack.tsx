@@ -79,9 +79,19 @@ const techCategories: TechCategory[] = [
     items: [
       { name: "DuckDB", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/duckdb/duckdb-original.svg" },
       { name: "MySQL", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" },
-      { name: "AWS", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" },
+      { name: "AWS", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original.svg" },
+      { name: "Google Cloud", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/googlecloud/googlecloud-original.svg" },
       { name: "Git", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" },
       { name: "GitHub", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" },
+    ]
+  },
+  {
+    category: "AI Tools",
+    items: [
+      { name: "Claude Code", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/claude/claude-original.svg" },
+      { name: "Cursor", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cursor/cursor-original.svg" },
+      { name: "OpenAI", logo: "https://cdn.jsdelivr.net/npm/@lobehub/icons-static-svg@1.102.0/icons/openai.svg" },
+      { name: "Ollama", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/ollama/ollama-original.svg" },
     ]
   }
 ];
