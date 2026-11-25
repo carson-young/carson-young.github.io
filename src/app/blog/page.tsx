@@ -55,6 +55,7 @@ export default async function BlogPage() {
       publishedAt: post.metadata.publishedAt,
       title: post.metadata.title,
       summary: post.metadata.summary,
+      image: post.metadata.image,
       tags: post.metadata.tags
     })),
     ...mediumPosts.map(post => ({
@@ -139,8 +140,28 @@ export default async function BlogPage() {
                 data-summary={post.summary.toLowerCase()}
                 data-tags={post.tags?.join(' ').toLowerCase() || ''}
               >
-                <article className="p-8 rounded-2xl border border-border/50 hover:border-border transition-all duration-300 hover:shadow-sm hover:shadow-border/20">
-                  <div className="space-y-4">
+                <article className="flex flex-col sm:flex-row overflow-hidden rounded-2xl border border-border/50 hover:border-border transition-all duration-300 hover:shadow-sm hover:shadow-border/20">
+                  {post.image && (
+                    <div className="relative aspect-[16/9] sm:aspect-auto sm:w-64 sm:min-h-[13rem] flex-shrink-0 overflow-hidden bg-muted border-b sm:border-b-0 sm:border-r border-border/50">
+                      {/* Blurred copy fills the box so any aspect ratio fits without cropping */}
+                      {/* eslint-disable-next-line @next/next/no-img-element */}
+                      <img
+                        src={post.image}
+                        alt=""
+                        aria-hidden="true"
+                        loading="lazy"
+                        className="absolute inset-0 h-full w-full object-cover scale-125 blur-2xl opacity-60"
+                      />
+                      {/* eslint-disable-next-line @next/next/no-img-element */}
+                      <img
+                        src={post.image}
+                        alt=""
+                        loading="lazy"
+                        className="absolute inset-0 h-full w-full object-contain p-2 drop-shadow-md transition-transform duration-500 group-hover:scale-[1.04]"
+                      />
+                    </div>
+                  )}
+                  <div className="flex flex-1 flex-col justify-between gap-4 p-6 sm:p-8">
                     <div className="space-y-3">
                       <div className="flex items-start justify-between">
                         <h3 className="text-xl font-medium tracking-tight group-hover:text-foreground transition-colors duration-200 flex-1 leading-relaxed">
@@ -150,16 +171,16 @@ export default async function BlogPage() {
                           <ExternalLink className="size-4 text-muted-foreground mt-1 ml-3 flex-shrink-0 opacity-0 group-hover:opacity-100 transition-opacity duration-200" />
                         )}
                       </div>
-                      <p className="text-muted-foreground leading-relaxed">
+                      <p className="text-muted-foreground leading-relaxed line-clamp-3">
                         {post.summary}
                       </p>
                     </div>
                     
-                    <div className="flex items-center justify-between pt-2">
+                    <div className="flex flex-wrap items-center justify-between gap-2 pt-2">
                       <time className="text-sm text-muted-foreground font-medium">
                         {formatDate(post.publishedAt)}
                       </time>
-                      <div className="flex items-center space-x-2">
+                      <div className="flex flex-wrap items-center gap-2">
                         {post.tags && post.tags.slice(0, 2).map((tag: string) => (
                           <span
                             key={tag}
